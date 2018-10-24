@@ -6,8 +6,8 @@ public class CreateSpaServices{
 		
 		//variables to hold a service description and price that a user can enter from the keyboard:
 		
-		String service;
-		double price;
+		//String service;
+		//double price;
 		
 		/*
 declare three objects. 
@@ -22,8 +22,9 @@ but the SpaService class does not
 		SpaService firstService= new SpaService();
 		SpaService secondService = new SpaService();
 		
-		Scanner keyboard= new Scanner (System.in);
+		//Scanner keyboard= new Scanner (System.in);
 		
+		/*
 		System.out.println("Enter service: ");
 		service=keyboard.nextLine();
 		//keyboard.nextLine();
@@ -48,6 +49,9 @@ but the SpaService class does not
 		secondService.setPrice(price);
 		*/
 		
+		firstService = getData(firstService);
+		secondService = getData(secondService);
+		
 		System.out.println("--------------------- ");
 		System.out.println("First service details: ");
 		System.out.println(firstService.getServiceDescription() + " $ " + firstService.getPrice()); 
@@ -56,6 +60,27 @@ but the SpaService class does not
 		System.out.println("Second service details: ");
 		System.out.println(secondService.getServiceDescription() + " $ " + secondService.getPrice()); 
 		System.out.println("--------------------- ");
+		
+	}
+	
+	//creating a method that accepts an unfilled SpaService object and returns one filled with data
+	
+	public static SpaService getData (SpaService services) {
+		
+		String service;
+		double price;
+		Scanner keyboard = new Scanner (System.in);
+		
+		System.out.println("Enter service: ");
+		service=keyboard.nextLine();
+				
+		System.out.println("Enter price: ");
+		price=keyboard.nextDouble();
+		keyboard.nextLine();
+		
+		services.setServiceDescription(service);
+		services.setPrice(price);
+		return services;
 		
 	}
 	

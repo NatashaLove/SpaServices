@@ -35,6 +35,7 @@ but the SpaService class does not
 		firstService.setServiceDescription(service);
 		firstService.setPrice(price);
 		
+		/*
 		System.out.println("Enter service: ");
 		service=keyboard.nextLine();
 		//keyboard.nextLine();
@@ -45,6 +46,7 @@ but the SpaService class does not
 		
 		secondService.setServiceDescription(service);
 		secondService.setPrice(price);
+		*/
 		
 		System.out.println("--------------------- ");
 		System.out.println("First service details: ");
